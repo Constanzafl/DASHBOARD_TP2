@@ -60,35 +60,55 @@ fig= plt.figure(figsize=(6,4))
 sns.scatterplot(x='ath', y='name',data = df_eleccion, color='purple') #puedo agregar hue
 st.pyplot(fig)
 
+dim= st.radio('Valores máximos históricos en USD:', ('Bitcoin', 'Ethereum', 'Tether USD', 'BNB', 'XRP', 'USD Coin',
+                                              'Lido', 'Cardano', 'Solana', 'Doge Coin'))
+
+if dim == 'Bitcoin':
+    st.write('FECHA:', top10.iloc[0][14], 'Valor:', top10.iloc[0][12])
+if dim == 'Ethereum':
+    st.write('Fecha:', top10.iloc[1][14], 'Valor:', top10.iloc[1][12])
+if dim == 'Tether USD':
+    st.write('Fecha:', top10.iloc[2][14], 'Valor:', top10.iloc[2][12])
+if dim == 'BNB':
+    st.write('Fecha:', top10.iloc[3][14], 'Valor:', top10.iloc[3][12])
+if dim == 'XRP':
+    st.write('Fecha:', top10.iloc[4][14], 'Valor:', top10.iloc[4][12])
+if dim == 'USD Coin':
+    st.write('Fecha:', top10.iloc[5][14], 'Valor:', top10.iloc[5][12])
+if dim == 'Lido':
+    st.write('Fecha:', top10.iloc[6][14], 'Valor:', top10.iloc[6][12])
+if dim == 'Cardano':
+    st.write('Fecha:', top10.iloc[7][14], 'Valor:', top10.iloc[7][12])
+if dim == 'Solana':
+    st.write('Fecha:', top10.iloc[8][14], 'Valor:', top10.iloc[8][12])
+if dim == 'Doge Coin':
+    st.write('Fecha:', top10.iloc[9][14], 'Valor:', top10.iloc[9][12])
+    
+
 st.write('### Valores mínimos historicos')
 fig= plt.figure(figsize=(6,4))
 sns.scatterplot(x='atl', y='name',data = df_eleccion, color='black') 
 st.pyplot(fig)
 
-col1, col2 = st.columns(2)
-with col1:
-    top10= top10[top10['name']=='Bitcoin']
-    fig=plt.figure()
-    sns.scatterplot(x='ath', y='name', data=top10)
-    plt.title('valor maximo bitcoin')
-    st.pyplot(fig)
-with col2:
-    top10= top10[top10['name']=='BNB']
-    fig=plt.figure()
-    sns.scatterplot(x='ath', y='name', data=top10)
-    plt.title('valor maximo bnb')
-    st.pyplot(fig)
-    
-    
-dim= st.radio('Dimensión a mostrar:', ('Filas', 'Columnas'))
-
-if dim == 'Filas':
-    st.write('Cantidad de filas:', top10.shape[0])
-if dim == 'Columnas':
-    st.write('Cantidad de columnas:', top10.shape[1])
-    
-precio_limite = st.slider('definir precio máximo', 0,4000, 70000)
-
-fig= plt.figure(figsize=(6,4))
-sns.scatterplot(x='ath', y='name', data = top10[top10['ath']<precio_limite])
-st.pyplot(fig)
+dim= st.radio('Valores mínimos históricos en USD:', ('Bitcoin', 'Ethereum', 'Tether USD', 'BNB', 'XRP', 'USD Coin',
+                                              'Lido', 'Cardano', 'Solana', 'Doge Coin'))
+if dim == 'Bitcoin':
+    st.write('Fecha:', top10.iloc[0][17], 'Valor:', top10.iloc[0][15])
+if dim == 'Ethereum':
+    st.write('Fecha:', top10.iloc[1][17], 'Valor:', top10.iloc[1][15])
+if dim == 'Tether USD':
+    st.write('Fecha:', top10.iloc[2][17], 'Valor:', top10.iloc[2][15])
+if dim == 'BNB':
+    st.write('Fecha:', top10.iloc[3][17], 'Valor:', top10.iloc[3][15])
+if dim == 'XRP':
+    st.write('Fecha:', top10.iloc[4][17], 'Valor:', top10.iloc[4][15])
+if dim == 'USD Coin':
+    st.write('Fecha:', top10.iloc[5][17], 'Valor:', top10.iloc[5][15])
+if dim == 'Lido':
+    st.write('Fecha:', top10.iloc[6][17], 'Valor:', top10.iloc[6][15])
+if dim == 'Cardano':
+    st.write('Fecha:', top10.iloc[7][17], 'Valor:', top10.iloc[7][15])
+if dim == 'Solana':
+    st.write('Fecha:', top10.iloc[8][17], 'Valor:', top10.iloc[8][15])
+if dim == 'Doge Coin':
+    st.write('Fecha:', top10.iloc[9][17], 'Valor:', top10.iloc[9][15])
