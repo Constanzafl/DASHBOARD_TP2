@@ -3,21 +3,38 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-if st.checkbox('mostrar texto'):
-    st.write('hola')
-    
+st.title('Top 10 de criptomonedas por capitalizacion de mercado')
+st.markdown('*****')
+
+
+if st.checkbox('¿Por qué capitalización de mercado?'):
+    st.write('La capitalización de mercado es un indicador clave que refleja el valor total de una criptomoneda en circulación en función de su precio actual. Es calculada multiplicando el precio actual de cada token por su oferta circulante. A través de este enfoque, podemos comprender la valoración relativa de cada token en comparación con otros en el mismo mercado.')
+    if st.button('MARKET-CAP'):
+        st.write('**Capitalizacion de mercado= Precio de activo digital * volument total circulante**')
 
 top10= pd.read_csv('10cripto.csv')
+top10['ath_date']= pd.to_datetime(top10['ath_date'])
+top10['atl_date']=pd.to_datetime(top10['atl_date'])
 
-if st.checkbox('mostrar df'):
+if st.checkbox('Data Frame top 10 monedas *FECHA=21/08/2023*'):
     st.dataframe(top10)
     
-if st.checkbox('vista de datos head o tail'):
-    if st.button('mostrar head'):
-        st.write(top10.head())
-    if st.button('mostrar tail'):
-        st.write(top10.tail())
-        
+if st.checkbox('Grafico de barras'):
+    if st.button('Top 10 capitalizacion de mercado'):
+        fig=plt.figure(figsize=(6,4))
+        plt.barh( top10['name'],top10['market_cap'], color='blue')
+        plt.xlabel('USD')
+        plt.ylabel('Criptomoneda')
+        plt.title('Capitalizacion de mercado')
+        st.pyplot(fig)
+    if st.button('Volumen total de criptomonedas'):
+        fig= plt.figure(figsize=(6,4))
+        plt.barh( top10['name'],top10['total_volume'], color='pink')
+        plt.xlabel('Volumen')
+        plt.ylabel('Criptomoneda')
+        plt.title('Volumen total de criptomonedas')
+        st.pyplot(fig)
+
 dim= st.radio('Dimensión a mostrar:', ('Filas', 'Columnas'))
 
 if dim == 'Filas':
