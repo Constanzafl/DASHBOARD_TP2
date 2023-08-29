@@ -35,27 +35,35 @@ if st.checkbox('Grafico de barras'):
         plt.title('Volumen total de criptomonedas')
         st.pyplot(fig)
 
-dim= st.radio('Dimensión a mostrar:', ('Filas', 'Columnas'))
-
-if dim == 'Filas':
-    st.write('Cantidad de filas:', top10.shape[0])
-if dim == 'Columnas':
-    st.write('Cantidad de columnas:', top10.shape[1])
+if st.checkbox('Correlacion entre precio, market cap y volumen de criptomonedas'):
+    if st.button('Mapa de calor'):
+        top10mkt= top10[['market_cap', 'total_volume', 'current_price']]
+        fig=plt.figure(figsize=(6,4))
+        sns.heatmap(top10mkt.corr(), annot=True, cmap='coolwarm', linewidths=0.5)
+        plt.title('Gráfico de Correlación entre Capitalización de Mercado y Volumen Total')
+        st.pyplot(fig)
     
-precio_limite = st.slider('definir precio máximo', 0,4000, 70000)
+st.write('#### Precios actuales de las 10 Criptomonedas con mayor capitalización de mercado')        
+fig= plt.figure(figsize=(5,5))
+precio_limite = st.slider('Cripto segun precio', 0,4000, 30000)
+sns.scatterplot(data=top10[top10['current_price']<precio_limite], x='current_price',y='name', color='red')
+plt.xlabel('Precio en USD')
+plt.ylabel('Nombre')
+st.pyplot(fig)    
 
-fig= plt.figure(figsize=(6,4))
-sns.scatterplot(x='ath', y='name', data = top10[top10['ath']<precio_limite])
-st.pyplot(fig)
-
+st.write('### Valores máximos historicos')
 criptomonedas= top10['name'].unique().tolist()
-eleccion_cripto= st.multiselect('seleccione una criptomoneda:', criptomonedas, default=['Bitcoin','BNB'])
+eleccion_cripto= st.multiselect('Seleccione una o mas criptomonedas:', criptomonedas, default=['Bitcoin','BNB'])
 df_eleccion= top10[top10['name'].isin(eleccion_cripto)]
 
 fig= plt.figure(figsize=(6,4))
-sns.scatterplot(x='ath', y='name',data = df_eleccion) #puedo agregar hue
+sns.scatterplot(x='ath', y='name',data = df_eleccion, color='purple') #puedo agregar hue
 st.pyplot(fig)
 
+st.write('### Valores mínimos historicos')
+fig= plt.figure(figsize=(6,4))
+sns.scatterplot(x='atl', y='name',data = df_eleccion, color='black') 
+st.pyplot(fig)
 
 col1, col2 = st.columns(2)
 with col1:
@@ -70,3 +78,17 @@ with col2:
     sns.scatterplot(x='ath', y='name', data=top10)
     plt.title('valor maximo bnb')
     st.pyplot(fig)
+    
+    
+dim= st.radio('Dimensión a mostrar:', ('Filas', 'Columnas'))
+
+if dim == 'Filas':
+    st.write('Cantidad de filas:', top10.shape[0])
+if dim == 'Columnas':
+    st.write('Cantidad de columnas:', top10.shape[1])
+    
+precio_limite = st.slider('definir precio máximo', 0,4000, 70000)
+
+fig= plt.figure(figsize=(6,4))
+sns.scatterplot(x='ath', y='name', data = top10[top10['ath']<precio_limite])
+st.pyplot(fig)
