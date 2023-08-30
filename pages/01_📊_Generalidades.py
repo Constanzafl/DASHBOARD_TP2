@@ -6,8 +6,9 @@ import seaborn as sns
 st.title('Top 10 de criptomonedas por capitalizacion de mercado')
 st.markdown('*****')
 
+st.write('**Elegimos 10 monedas teniendo en cuenta como parametro, la capitalizacion de mercado en orden descendente.**')
 
-if st.checkbox('¿Por qué capitalización de mercado?'):
+if st.checkbox('¿Por qué elegimos capitalización de mercado?'):
     st.write('La capitalización de mercado es un indicador clave que refleja el valor total de una criptomoneda en circulación en función de su precio actual. Es calculada multiplicando el precio actual de cada token por su oferta circulante. A través de este enfoque, podemos comprender la valoración relativa de cada token en comparación con otros en el mismo mercado.')
     if st.button('MARKET-CAP'):
         st.write('**Capitalizacion de mercado= Precio de activo digital * volument total circulante**')
@@ -16,7 +17,7 @@ top10= pd.read_csv('10cripto.csv')
 top10['ath_date']= pd.to_datetime(top10['ath_date'])
 top10['atl_date']=pd.to_datetime(top10['atl_date'])
 
-if st.checkbox('Data Frame top 10 monedas *FECHA=21/08/2023*'):
+if st.checkbox('Data Frame top 10 monedas, obtenido de la fuentes de información de CoinGecko'):
     st.dataframe(top10)
     
 if st.checkbox('Grafico de barras'):

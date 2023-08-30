@@ -17,7 +17,7 @@ teter= pd.read_csv('tetherDB.csv')
 usd=pd.read_csv('usdDB.csv')
 xrp=pd.read_csv('xrpDB.csv')
 
-st.write('## Precio, capitalizacion de mercado y trading volume')
+st.write('**Haciendo click en la siguiente cuadricula, podras ver los graficos correspondientes a cada moneda con precio, capitalizacion de mercado y trading volume**')
 bitcoin['FECHAS']=pd.to_datetime(bitcoin['FECHAS'])
 bnb['FECHAS']=pd.to_datetime(bnb['FECHAS'])
 car['FECHAS']=pd.to_datetime(car['FECHAS'])
@@ -81,7 +81,7 @@ if st.checkbox('Ethereum'):
     plt.grid(True)
     st.pyplot(fig3) 
     
-if st.checkbox('TETHER'):
+if st.checkbox('Tether'):
     fig1= plt.figure(figsize=(10, 6))
     plt.plot(teter['FECHAS'], teter['PRECIO-usd'], label='Precio de Cierre', color='blue')
     plt.xlabel('Fecha')
