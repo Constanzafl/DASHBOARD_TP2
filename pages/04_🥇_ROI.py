@@ -36,7 +36,7 @@ selected_token = st.selectbox('Elije un token:', df_crypto_dashboard['COIN_ID'].
 df_selected_token = df_crypto_dashboard[df_crypto_dashboard['COIN_ID'] == selected_token]
 
 st.header('Ganancias y Pérdidas 💰')
-st.write("¿ón (ROI).")
+st.write("")
 
 selected_investment_date = st.date_input('Selecciona una fecha para invertir:')
 selected_future_date = st.date_input('Selecciona una fecha futura:')
