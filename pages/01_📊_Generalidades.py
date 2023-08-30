@@ -14,8 +14,8 @@ if st.checkbox('¿Por qué elegimos capitalización de mercado?'):
         st.write('**Capitalizacion de mercado= Precio de activo digital * volument total circulante**')
 
 top10= pd.read_csv('10cripto.csv')
-top10['ath_date']= pd.to_datetime(top10['ath_date'])
-top10['atl_date']=pd.to_datetime(top10['atl_date'])
+top10['ath_date']= pd.to_datetime(top10['ath_date']).dt.date
+top10['atl_date']=pd.to_datetime(top10['atl_date']).dt.date
 
 if st.checkbox('Data Frame top 10 monedas, obtenido de la fuentes de información de CoinGecko'):
     st.dataframe(top10)
