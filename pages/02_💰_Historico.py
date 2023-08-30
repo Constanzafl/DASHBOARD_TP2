@@ -18,6 +18,16 @@ usd=pd.read_csv('usdDB.csv')
 xrp=pd.read_csv('xrpDB.csv')
 
 st.write('## Precio, capitalizacion de mercado y trading volume')
+bitcoin['FECHAS']=pd.to_datetime(bitcoin['FECHAS'])
+bnb['FECHAS']=pd.to_datetime(bnb['FECHAS'])
+car['FECHAS']=pd.to_datetime(car['FECHAS'])
+doge['FECHAS']=pd.to_datetime(doge['FECHAS'])
+eter['FECHAS']=pd.to_datetime(eter['FECHAS'])
+lido['FECHAS']=pd.to_datetime(lido['FECHAS'])
+sol['FECHAS']=pd.to_datetime(sol['FECHAS'])
+teter['FECHAS']=pd.to_datetime(teter['FECHAS'])
+usd['FECHAS']=pd.to_datetime(usd['FECHAS'])
+xrp['FECHAS']=pd.to_datetime(xrp['FECHAS'])
 
 if st.checkbox('BITCOIN'):
     fig1= plt.figure(figsize=(10, 6))

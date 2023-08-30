@@ -53,7 +53,7 @@ st.pyplot(fig)
 
 st.write('### Valores máximos historicos')
 criptomonedas= top10['name'].unique().tolist()
-eleccion_cripto= st.multiselect('Seleccione una o mas criptomonedas:', criptomonedas, default=['Bitcoin','BNB'])
+eleccion_cripto= st.multiselect('Seleccione una o mas criptomonedas:', criptomonedas, default=['Bitcoin','Ethereum'])
 df_eleccion= top10[top10['name'].isin(eleccion_cripto)]
 
 fig= plt.figure(figsize=(6,4))
