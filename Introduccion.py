@@ -1,7 +1,7 @@
 import streamlit as st
 
-logo_path = '/Users/flori/Downloads/png-transparent-cryptocurrency-exchange-trade-bitcoin-foreign-exchange-market-bitcoin-trademark-service-logo.png'  
-st.image(logo_path, width=500)
+#logo_path = '/Users/flori/Downloads/png-transparent-cryptocurrency-exchange-trade-bitcoin-foreign-exchange-market-bitcoin-trademark-service-logo.png'  
+#st.image(logo_path, width=500)
 
 st.title('🪙Introduciendonos al mundo de las criptomonedas🪙')
 
