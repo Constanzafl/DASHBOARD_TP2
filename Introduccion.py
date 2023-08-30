@@ -2,7 +2,7 @@ import streamlit as st
 
 
 logo_path= 'coins.png'
-st.image(logo_path, width=500)
+st.image(logo_path, width=300)
 
 st.title('🪙Introduciéndonos al mundo de las criptomonedas🪙')
 
