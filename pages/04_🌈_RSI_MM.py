@@ -6,6 +6,11 @@ import seaborn as sns
 st.title('Indice de Fuerza Relativa y Media movil')
 st.markdown('*****') 
 
+if st.button('RSI'):
+    st.write('El RSI es un indicador de "momentum" que manifiesta si un activo está sobrecomprado o sobrevendido. Lo hace midiendo la magnitud de los cambios de precio recientes (la configuración estándar son los 14 periodos previos –es decir, 14 días). Muestra el ritmo (momentum) al que el precio está cambiando. Esto significa que, si el "momentum" se incrementa mientras el precio sube, la tendencia al alza es fuerte y cada vez más compradores están entrando. Por el contrario, si el "momentum" se reduce mientras el precio sube, podría indicar que pronto los vendedores se harán con el control del mercado. Una interpretación tradicional del RSI dice que por encima de 70 un activo está sobrecomprado, mientras que por debajo de 30 está sobrevendido. ')
+if st.button('Media Movil'):
+    st.write('Una media móvil suaviza la acción del precio al filtrar el "ruido" del mercado y resaltar la dirección de la tendencia. Dado que se basa en datos del precio pasados, se considera un indicador atrasado. Cuanto más largo sea el periodo, mayor será el atraso. Por lo tanto, la SMA de 200 días reaccionará de forma más lenta a la acción del precio reciente que la SMA de 50 días. Los traders a menudo utilizan la relación del precio con determinadas medias móviles para evaluar la tendencia actual del mercado.')
+
 bitcoin= pd.read_csv('bitcoinDB.csv')
 bnb= pd.read_csv('bnbDB.csv')
 car= pd.read_csv('bnbDB.csv')

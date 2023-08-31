@@ -5,6 +5,7 @@ import seaborn as sns
 import plotly.express as px
 
 st.title('ROI')
+st.markdown('El rendimiento/retorno de la inversión (ROI) es una medida financiera utilizada para evaluar la eficacia de una inversión en un activo. Es un indicador del crecimiento del valor de su inversión durante un determinado periodo de tiempo. El ROI es una de las principales medidas financieras utilizadas tanto en el mercado de valores tradicional como en el mundo de las criptomonedas.')
 
 bitcoin= pd.read_csv('bitcoinDB.csv')
 bnb= pd.read_csv('bnbDB.csv')

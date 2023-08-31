@@ -10,7 +10,11 @@ st.markdown('### Uno de los acrónimos clásicos en la cultura cripto es DYOR, o
 st.write('****')
 
 if st.button('VENTAJAS'):
-    st.write('')
+    st.write('✔️SISTEMA DESCENTRALIZADO')
+    st.write('✔️DEFLACIONARIO')
+    st.write('✔️MAS PRIVACIDAD')
     
 if st.button('DESVENTAJAS'):
-    st.write('')
+    st.write('❌CENTRALIZADO')
+    st.write('❌INFLACIÓN')
+    st.write('❌VOLATILIDAD')

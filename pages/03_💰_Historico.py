@@ -30,6 +30,7 @@ usd['FECHAS']=pd.to_datetime(usd['FECHAS'])
 xrp['FECHAS']=pd.to_datetime(xrp['FECHAS'])
 
 if st.checkbox('BITCOIN'):
+    st.markdown('Bitcoin es la primera y más reconocida criptomoneda. Fue creado como una alternativa a las monedas fiduciarias tradicionales y es considerado por muchos como una reserva de valor digital. Su oferta limitada y la adopción institucional han contribuido a su crecimiento y legitimidad en los mercados financieros.')
     fig1= plt.figure(figsize=(10, 6))
     plt.plot(bitcoin['FECHAS'], bitcoin['PRECIO-usd'], label='Precio de Cierre', color='blue')
     plt.xlabel('Fecha')
@@ -57,6 +58,7 @@ if st.checkbox('BITCOIN'):
 
 
 if st.checkbox('Ethereum'):
+    st.markdown('Ethereum es una plataforma de contratos inteligentes y aplicaciones descentralizadas. Es conocido por impulsar el auge de las finanzas descentralizadas (DeFi) y los tokens no fungibles (NFT), transformando la forma en que se construyen y utilizan aplicaciones en línea.')
     fig1= plt.figure(figsize=(10, 6))
     plt.plot(eter['FECHAS'], eter['PRECIO-usd'], label='Precio de Cierre', color='blue')
     plt.xlabel('Fecha')
@@ -82,6 +84,7 @@ if st.checkbox('Ethereum'):
     st.pyplot(fig3) 
     
 if st.checkbox('Tether'):
+    st.markdown('Tether es una criptomoneda estable vinculada al dólar estadounidense. Se utiliza como refugio de valor en momentos de volatilidad y facilita el comercio en exchanges al proporcionar estabilidad de precio.')
     fig1= plt.figure(figsize=(10, 6))
     plt.plot(teter['FECHAS'], teter['PRECIO-usd'], label='Precio de Cierre', color='blue')
     plt.xlabel('Fecha')
@@ -106,7 +109,8 @@ if st.checkbox('Tether'):
     plt.grid(True)
     st.pyplot(fig3) 
         
-if st.checkbox('BNB'):
+if st.checkbox('Binance Coin'):
+    st.markdown('BNB es la moneda nativa de la plataforma de intercambio Binance. Se utiliza para pagar tarifas de transacción en la plataforma y ha ganado popularidad debido a su utilidad y a las ventas de tokens en la plataforma.')
     fig1= plt.figure(figsize=(10, 6))
     plt.plot(bnb['FECHAS'], bnb['PRECIO-usd'], label='Precio de Cierre', color='blue')
     plt.xlabel('Fecha')
@@ -132,6 +136,7 @@ if st.checkbox('BNB'):
     st.pyplot(fig3) 
     
 if st.checkbox('XRP'):
+    st.markdown('Ripple se enfoca en facilitar transferencias internacionales de dinero de manera rápida y eficiente. Aunque ha enfrentado desafíos regulatorios, su enfoque en soluciones de pagos globales sigue siendo relevante en la industria.')
     fig1= plt.figure(figsize=(10, 6))
     plt.plot(xrp['FECHAS'], xrp['PRECIO-usd'], label='Precio de Cierre', color='blue')
     plt.xlabel('Fecha')
@@ -157,6 +162,7 @@ if st.checkbox('XRP'):
     st.pyplot(fig3) 
     
 if st.checkbox('USD Coin'):
+    st.markdown('Similar a Tether, USDC es una criptomoneda estable vinculada al dólar estadounidense. Ofrece estabilidad de valor y es ampliamente utilizado en exchanges y aplicaciones financieras.')
     fig1= plt.figure(figsize=(10, 6))
     plt.plot(usd['FECHAS'], usd['PRECIO-usd'], label='Precio de Cierre', color='blue')
     plt.xlabel('Fecha')
@@ -182,6 +188,7 @@ if st.checkbox('USD Coin'):
     st.pyplot(fig3) 
     
 if st.checkbox('Lido Staker Ether'):
+    st.markdown('STETH es una forma de participar en Ethereum 2.0, una actualización de Ethereum para mejorar su escalabilidad y eficiencia. Los poseedores de STETH obtienen recompensas por validar transacciones en la red Ethereum.')
     fig1= plt.figure(figsize=(10, 6))
     plt.plot(lido['FECHAS'], lido['PRECIO-usd'], label='Precio de Cierre', color='blue')
     plt.xlabel('Fecha')
@@ -207,6 +214,7 @@ if st.checkbox('Lido Staker Ether'):
     st.pyplot(fig3) 
     
 if st.checkbox('Cardano'):
+    st.markdown('Cardano se centra en la investigación científica y el desarrollo de soluciones blockchain escalables y sostenibles. Ofrece un enfoque único en la gobernanza y la investigación académica.')
     fig1= plt.figure(figsize=(10, 6))
     plt.plot(car['FECHAS'], car['PRECIO-usd'], label='Precio de Cierre', color='blue')
     plt.xlabel('Fecha')
@@ -232,6 +240,7 @@ if st.checkbox('Cardano'):
     st.pyplot(fig3) 
 
 if st.checkbox('Solana'):
+    st.markdown('Solana destaca por su alta velocidad y escalabilidad, lo que lo hace adecuado para aplicaciones descentralizadas de alto rendimiento y DeFi.')
     fig1= plt.figure(figsize=(10, 6))
     plt.plot(sol['FECHAS'], sol['PRECIO-usd'], label='Precio de Cierre', color='blue')
     plt.xlabel('Fecha')
@@ -257,6 +266,7 @@ if st.checkbox('Solana'):
     st.pyplot(fig3) 
     
 if st.checkbox('Doge Coin'):
+    st.markdown('Dogecoin comenzó como una broma, pero ha ganado una comunidad activa. Aunque tiene un enfoque menos serio, ha ganado popularidad y atención en los medios.')
     fig1= plt.figure(figsize=(10, 6))
     plt.plot(doge['FECHAS'], doge['PRECIO-usd'], label='Precio de Cierre', color='blue')
     plt.xlabel('Fecha')
