@@ -19,4 +19,4 @@ if st.button('DESVENTAJAS'):
     st.write('❌CENTRALIZADO')
     st.write('❌INFLACIÓN')
     st.write('❌VOLATILIDAD')
-    st.write('❌CMPLEJO')
+    st.write('❌COMPLEJO')
