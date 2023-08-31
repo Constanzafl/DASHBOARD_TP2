@@ -36,3 +36,5 @@ if st.button('MAS INFO'):
     st.write('[Binance](https://academy.binance.com/en)')
     st.write('[CMC](https://coinmarketcap.com/alexandria)')
     st.write('[Coingecko](https://www.coingecko.com/en/api)')
+
+st.markdown('*****')
