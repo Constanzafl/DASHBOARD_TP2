@@ -13,8 +13,10 @@ if st.button('VENTAJAS'):
     st.write('✔️SISTEMA DESCENTRALIZADO')
     st.write('✔️DEFLACIONARIO')
     st.write('✔️MAS PRIVACIDAD')
+    st.write('✔️EN CONSTANTE CRECIMIENTO')
     
 if st.button('DESVENTAJAS'):
     st.write('❌CENTRALIZADO')
     st.write('❌INFLACIÓN')
     st.write('❌VOLATILIDAD')
+    st.write('❌CMPLEJO')

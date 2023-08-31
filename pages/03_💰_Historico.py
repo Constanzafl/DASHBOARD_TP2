@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-st.title('Valores historicos de las criptomonedas desde el año 2020 hasta la actualidad')
+st.title('Valores históricos de las criptomonedas desde el año 2020 hasta la actualidad')
 st.markdown('*****')
 
 bitcoin= pd.read_csv('bitcoinDB.csv')
@@ -17,7 +17,7 @@ teter= pd.read_csv('tetherDB.csv')
 usd=pd.read_csv('usdDB.csv')
 xrp=pd.read_csv('xrpDB.csv')
 
-st.write('**Haciendo click en la siguiente cuadricula, podras ver los graficos correspondientes a cada moneda con precio, capitalizacion de mercado y trading volume**')
+st.write('**Haciendo click en la siguiente cuadrícula, podras ver los gráficos correspondientes a cada moneda con precio, capitalización de mercado y trading volume**')
 bitcoin['FECHAS']=pd.to_datetime(bitcoin['FECHAS'])
 bnb['FECHAS']=pd.to_datetime(bnb['FECHAS'])
 car['FECHAS']=pd.to_datetime(car['FECHAS'])

@@ -3,10 +3,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-st.title('Top 10 de criptomonedas por capitalizacion de mercado')
+st.title('Top 10 de criptomonedas por capitalización de mercado')
 st.markdown('*****')
 
-st.write('**Elegimos 10 monedas teniendo en cuenta como parametro, la capitalizacion de mercado en orden descendente.**')
+st.write('**Elegimos 10 monedas teniendo en cuenta como parámetro, la capitalización de mercado en orden descendente.**')
 
 if st.checkbox('¿Por qué elegimos capitalización de mercado?'):
     st.write('La capitalización de mercado es un indicador clave que refleja el valor total de una criptomoneda en circulación en función de su precio actual. Es calculada multiplicando el precio actual de cada token por su oferta circulante. A través de este enfoque, podemos comprender la valoración relativa de cada token en comparación con otros en el mismo mercado.')

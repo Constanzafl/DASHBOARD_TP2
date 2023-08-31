@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-st.title('Indice de Fuerza Relativa y Media movil')
+st.title('Índice de Fuerza Relativa y Media móvil')
 st.markdown('*****') 
 
 if st.button('RSI'):
