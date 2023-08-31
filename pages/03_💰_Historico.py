@@ -37,7 +37,8 @@ if st.checkbox('BITCOIN'):
     plt.ylabel('Precio USD')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig1)
+    st.plotly_chart(fig1)
+    
     
     fig2= plt.figure(figsize=(10, 6))
     plt.plot(bitcoin['FECHAS'], bitcoin['MARKET_CAP-usd'], label='market cap', color='red')
@@ -45,7 +46,8 @@ if st.checkbox('BITCOIN'):
     plt.ylabel('Market Cap')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig2)
+    st.plotly_chart(fig2)
+    
     
     fig3= plt.figure(figsize=(10, 6))
     plt.plot(bitcoin['FECHAS'], bitcoin['TOTAL_VOLUMES'], label='volumen', color='orange')
@@ -53,7 +55,8 @@ if st.checkbox('BITCOIN'):
     plt.ylabel('Volume')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig3)    
+    st.plotly_chart(fig3)
+      
 
 
 
@@ -65,7 +68,8 @@ if st.checkbox('Ethereum'):
     plt.ylabel('Precio USD')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig1)
+    st.plotly_chart(fig1)
+    
     
     fig2= plt.figure(figsize=(10, 6))
     plt.plot(eter['FECHAS'], eter['MARKET_CAP-usd'], label='market cap', color='red')
@@ -73,7 +77,8 @@ if st.checkbox('Ethereum'):
     plt.ylabel('Market Cap')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig2)
+    st.plotly_chart(fig2)
+    
     
     fig3= plt.figure(figsize=(10, 6))
     plt.plot(eter['FECHAS'], eter['TOTAL_VOLUMES'], label='volumen', color='orange')
@@ -81,7 +86,8 @@ if st.checkbox('Ethereum'):
     plt.ylabel('Volume')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig3) 
+    st.plotly_chart(fig3)
+     
     
 if st.checkbox('Tether'):
     st.markdown('Tether es una criptomoneda estable vinculada al dólar estadounidense. Se utiliza como refugio de valor en momentos de volatilidad y facilita el comercio en exchanges al proporcionar estabilidad de precio.')
@@ -91,7 +97,8 @@ if st.checkbox('Tether'):
     plt.ylabel('Precio USD')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig1)
+    st.plotly_chart(fig1)
+    
     
     fig2= plt.figure(figsize=(10, 6))
     plt.plot(teter['FECHAS'], teter['MARKET_CAP-usd'], label='market cap', color='red')
@@ -99,7 +106,8 @@ if st.checkbox('Tether'):
     plt.ylabel('Market Cap')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig2)
+    st.plotly_chart(fig2)
+    
     
     fig3= plt.figure(figsize=(10, 6))
     plt.plot(teter['FECHAS'], teter['TOTAL_VOLUMES'], label='volumen', color='orange')
@@ -107,7 +115,8 @@ if st.checkbox('Tether'):
     plt.ylabel('Volume')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig3) 
+    st.plotly_chart(fig3)
+     
         
 if st.checkbox('Binance Coin'):
     st.markdown('BNB es la moneda nativa de la plataforma de intercambio Binance. Se utiliza para pagar tarifas de transacción en la plataforma y ha ganado popularidad debido a su utilidad y a las ventas de tokens en la plataforma.')
@@ -117,7 +126,8 @@ if st.checkbox('Binance Coin'):
     plt.ylabel('Precio USD')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig1)
+    st.plotly_chart(fig1)
+    
     
     fig2= plt.figure(figsize=(10, 6))
     plt.plot(bnb['FECHAS'], bnb['MARKET_CAP-usd'], label='market cap', color='red')
@@ -125,7 +135,8 @@ if st.checkbox('Binance Coin'):
     plt.ylabel('Market Cap')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig2)
+    st.plotly_chart(fig2)
+    
     
     fig3= plt.figure(figsize=(10, 6))
     plt.plot(bnb['FECHAS'], bnb['TOTAL_VOLUMES'], label='volumen', color='orange')
@@ -133,7 +144,8 @@ if st.checkbox('Binance Coin'):
     plt.ylabel('Volume')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig3) 
+    st.plotly_chart(fig3)
+     
     
 if st.checkbox('XRP'):
     st.markdown('Ripple se enfoca en facilitar transferencias internacionales de dinero de manera rápida y eficiente. Aunque ha enfrentado desafíos regulatorios, su enfoque en soluciones de pagos globales sigue siendo relevante en la industria.')
@@ -143,7 +155,8 @@ if st.checkbox('XRP'):
     plt.ylabel('Precio USD')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig1)
+    st.plotly_chart(fig1)
+    
     
     fig2= plt.figure(figsize=(10, 6))
     plt.plot(xrp['FECHAS'], xrp['MARKET_CAP-usd'], label='market cap', color='red')
@@ -151,7 +164,8 @@ if st.checkbox('XRP'):
     plt.ylabel('Market Cap')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig2)
+    st.plotly_chart(fig2)
+    
     
     fig3= plt.figure(figsize=(10, 6))
     plt.plot(xrp['FECHAS'], xrp['TOTAL_VOLUMES'], label='volumen', color='orange')
@@ -159,7 +173,8 @@ if st.checkbox('XRP'):
     plt.ylabel('Volume')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig3) 
+    st.plotly_chart(fig3)
+     
     
 if st.checkbox('USD Coin'):
     st.markdown('Similar a Tether, USDC es una criptomoneda estable vinculada al dólar estadounidense. Ofrece estabilidad de valor y es ampliamente utilizado en exchanges y aplicaciones financieras.')
@@ -169,7 +184,8 @@ if st.checkbox('USD Coin'):
     plt.ylabel('Precio USD')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig1)
+    st.plotly_chart(fig1)
+    
     
     fig2= plt.figure(figsize=(10, 6))
     plt.plot(usd['FECHAS'], usd['MARKET_CAP-usd'], label='market cap', color='red')
@@ -177,7 +193,8 @@ if st.checkbox('USD Coin'):
     plt.ylabel('Market Cap')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig2)
+    st.plotly_chart(fig2)
+    
     
     fig3= plt.figure(figsize=(10, 6))
     plt.plot(usd['FECHAS'], usd['TOTAL_VOLUMES'], label='volumen', color='orange')
@@ -185,7 +202,8 @@ if st.checkbox('USD Coin'):
     plt.ylabel('Volume')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig3) 
+    st.plotly_chart(fig3)
+     
     
 if st.checkbox('Lido Staker Ether'):
     st.markdown('STETH es una forma de participar en Ethereum 2.0, una actualización de Ethereum para mejorar su escalabilidad y eficiencia. Los poseedores de STETH obtienen recompensas por validar transacciones en la red Ethereum.')
@@ -195,7 +213,8 @@ if st.checkbox('Lido Staker Ether'):
     plt.ylabel('Precio USD')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig1)
+    st.plotly_chart(fig1)
+    
     
     fig2= plt.figure(figsize=(10, 6))
     plt.plot(lido['FECHAS'], lido['MARKET_CAP-usd'], label='market cap', color='red')
@@ -203,7 +222,8 @@ if st.checkbox('Lido Staker Ether'):
     plt.ylabel('Market Cap')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig2)
+    st.plotly_chart(fig2)
+    
     
     fig3= plt.figure(figsize=(10, 6))
     plt.plot(lido['FECHAS'], lido['TOTAL_VOLUMES'], label='volumen', color='orange')
@@ -211,7 +231,8 @@ if st.checkbox('Lido Staker Ether'):
     plt.ylabel('Volume')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig3) 
+    st.plotly_chart(fig3)
+     
     
 if st.checkbox('Cardano'):
     st.markdown('Cardano se centra en la investigación científica y el desarrollo de soluciones blockchain escalables y sostenibles. Ofrece un enfoque único en la gobernanza y la investigación académica.')
@@ -221,7 +242,8 @@ if st.checkbox('Cardano'):
     plt.ylabel('Precio USD')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig1)
+    st.plotly_chart(fig1)
+    
     
     fig2= plt.figure(figsize=(10, 6))
     plt.plot(car['FECHAS'], car['MARKET_CAP-usd'], label='market cap', color='red')
@@ -229,7 +251,8 @@ if st.checkbox('Cardano'):
     plt.ylabel('Market Cap')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig2)
+    st.plotly_chart(fig2)
+    
     
     fig3= plt.figure(figsize=(10, 6))
     plt.plot(car['FECHAS'], car['TOTAL_VOLUMES'], label='volumen', color='orange')
@@ -237,7 +260,8 @@ if st.checkbox('Cardano'):
     plt.ylabel('Volume')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig3) 
+    st.plotly_chart(fig3)
+     
 
 if st.checkbox('Solana'):
     st.markdown('Solana destaca por su alta velocidad y escalabilidad, lo que lo hace adecuado para aplicaciones descentralizadas de alto rendimiento y DeFi.')
@@ -247,7 +271,8 @@ if st.checkbox('Solana'):
     plt.ylabel('Precio USD')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig1)
+    st.plotly_chart(fig1)
+    
     
     fig2= plt.figure(figsize=(10, 6))
     plt.plot(sol['FECHAS'], sol['MARKET_CAP-usd'], label='market cap', color='red')
@@ -255,7 +280,8 @@ if st.checkbox('Solana'):
     plt.ylabel('Market Cap')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig2)
+    st.plotly_chart(fig2)
+    
     
     fig3= plt.figure(figsize=(10, 6))
     plt.plot(sol['FECHAS'], sol['TOTAL_VOLUMES'], label='volumen', color='orange')
@@ -263,7 +289,8 @@ if st.checkbox('Solana'):
     plt.ylabel('Volume')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig3) 
+    st.plotly_chart(fig3)
+     
     
 if st.checkbox('Doge Coin'):
     st.markdown('Dogecoin comenzó como una broma, pero ha ganado una comunidad activa. Aunque tiene un enfoque menos serio, ha ganado popularidad y atención en los medios.')
@@ -273,7 +300,8 @@ if st.checkbox('Doge Coin'):
     plt.ylabel('Precio USD')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig1)
+    st.plotly_chart(fig1)
+    
     
     fig2= plt.figure(figsize=(10, 6))
     plt.plot(doge['FECHAS'], doge['MARKET_CAP-usd'], label='market cap', color='red')
@@ -281,7 +309,8 @@ if st.checkbox('Doge Coin'):
     plt.ylabel('Market Cap')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig2)
+    st.plotly_chart(fig2)
+    
     
     fig3= plt.figure(figsize=(10, 6))
     plt.plot(doge['FECHAS'], doge['TOTAL_VOLUMES'], label='volumen', color='orange')
@@ -289,4 +318,5 @@ if st.checkbox('Doge Coin'):
     plt.ylabel('Volume')
     plt.legend()
     plt.grid(True)
-    st.pyplot(fig3) 
+    st.plotly_chart(fig3)
+     
