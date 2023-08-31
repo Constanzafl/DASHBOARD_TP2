@@ -16,7 +16,5 @@ if st.button('VENTAJAS'):
     st.write('✔️EN CONSTANTE CRECIMIENTO')
     
 if st.button('DESVENTAJAS'):
-    st.write('❌CENTRALIZADO')
-    st.write('❌INFLACIÓN')
     st.write('❌VOLATILIDAD')
     st.write('❌COMPLEJO')
